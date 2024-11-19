@@ -43,9 +43,5 @@ def hi(*args, **key):
       return "Hi!"
    if len(valid_args) == 1:
       return f"Hi {valid_args[0]}!"
-   result = "Hi "
-   for i in range(len(valid_args) - 1):
-      result += valid_args[i] + ", "
-   result += "and " + valid_args[-1] + "!"
-   return result
+   return f"Hi {', '.join(valid_args[:-1])}, and {valid_args[-1]}!"
 #endregion bailam
